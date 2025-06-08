@@ -62,15 +62,17 @@ a:hover{
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows:  9fr 0.3fr;
-    gap: 1rem;
+    gap: 4rem;
     padding: 1rem 2rem;
 }
 .card{
     width: 100%;
     height: 100%;
+    position: relative;
     border: 1px solid var(--border-color);
     background-color: var(--card-background);
     box-shadow: 0 4px 6px var(--shadow-color);
+    padding: 5px;
 }
 .card:hover {
     border-color: var(--hover-color);
@@ -79,22 +81,21 @@ h3 {
     margin: 1rem 0;
     color: var(--heading-color);
 }
+
 .projects-section .projects {
     width: auto;
     height: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    gap: 3rem;
 }
-.projects .project {
-    
-}
+
 .main .news {
     height: 90%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 3rem;
+    gap: 6rem;
 }
 .header{
     display: grid;
@@ -139,3 +140,11 @@ h3 {
     gap: 5px;
 }
 
+.card .icons {
+    position: absolute;
+    bottom: 5px;
+    right: 2px;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
