@@ -1,25 +1,64 @@
+:root {
+    --primary-color: #4CAF50; /* Green for primary elements */
+    --secondary-color: #FF9800; /* Orange for accents */
+    --background-color: #F5F5F5; /* Light gray for background */
+    --card-background: #FFFFFF; /* White for cards */
+    --text-color: #333333; /* Dark gray for text */
+    --heading-color: #212121; /* Slightly darker gray for headings */
+    --border-color: #E0E0E0; /* Light gray for borders */
+    --hover-color: #388E3C; /* Darker green for hover effects */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 *  {
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+a {
+    color: var(--card-background);
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+}
+a:hover{
+    color: var(--secondary-color);
+}
 .admin-dashboard {
-    background-color: brown;
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: min-content 6fr;
 }
 .header {
-    background-color: rgb(50, 36, 19);
     grid-column: 2/3;
+    background-color: var(--card-background);
 }
-.nav {
-    background-color: bisque;
+.sidebar {
     grid-row: 1/3;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr 15fr;
 }
+.sidebar .nav {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-rows: min-content 0.6fr 6fr;
+}
+.sidebar .nav .links-group1 {
+    grid-row: 1/2;
+}
+.sidebar .nav .links-group2 {
+    grid-row: 3/4;
+}
+
 .main  {
-    background-color: teal;
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows:  9fr 0.3fr;
@@ -27,12 +66,18 @@
     padding: 1rem 2rem;
 }
 .card{
-    background-color:whitesmoke ;
     width: 100%;
     height: 100%;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+.card:hover {
+    border-color: var(--hover-color);
 }
 h3 {
-    margin: 1rem auto;
+    margin: 1rem 0;
+    color: var(--heading-color);
 }
 .projects-section .projects {
     width: auto;
@@ -43,8 +88,7 @@ h3 {
     gap: 1.5rem;
 }
 .projects .project {
-    background-color: azure;
-    border: 1px solid black;
+    
 }
 .main .news {
     height: 90%;
@@ -52,6 +96,46 @@ h3 {
     grid-template-rows: 1fr 1fr;
     gap: 3rem;
 }
-.news .announcements {
-
+.header{
+    display: grid;
+    padding: 10px;
+    grid-template-rows:  min-content  min-content;
+    padding: 0 1.5rem;
 }
+.header .top-header  {
+   display: grid;
+   grid-template-columns: 1fr 20fr 1fr 1fr 5fr;
+   align-items: center;
+   gap: 5px;
+}
+.header .top-header input {
+   height: 1.7rem;
+   border-radius: 5px;
+   width: 100%;
+}
+.magnifying-glass {
+    text-align: end;
+}
+.header .second-header  {
+   display: grid;
+   grid-template-columns: 5fr 1fr 1fr 1fr;
+   align-items: center;
+   gap: 5px;
+}
+.user-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+.btn {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding:7px;
+    color: #FFFFFF;
+}
+.header .second-header > div {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    gap: 5px;
+}
+

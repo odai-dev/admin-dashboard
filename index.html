@@ -5,14 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Admin Dashboard</title>
 </head>
 
 <body>
     <div class="admin-dashboard">
-        <header class="header"></header>
+        <header class="header">
+            <div class="top-header">
+                <i class="fa-solid fa-magnifying-glass magnifying-glass"></i>
+                <input type="search" name="" id="">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-circle-user user-icon"></i>
+                <h3>Odai Gubran</h3>
+            </div>
+            <div class="second-header">
+                <div>
+                    <i class="fa-solid fa-circle-user user-icon"></i>
+                    <div class="user-greeting">
+                        <p>Hi there!</p>
+                        <h3>Odai Gubran(@odai)</h>
+                    </div>
+                </div>
+                <button class="btn">New</button>
+                <button class="btn">Upload</button>
+                <button class="btn">Share</button>
+            </div>
+        </header>
         <div class="sidebar">
-            <nav class="nav"></nav>
+                <h1><i class="fas fa-chalkboard-teacher"></i> Dashboard</h1>
+           
+            <nav class="nav">
+                <div class="links-group1">
+                    <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="#"><i class="fa-solid fa-circle-user"></i> Profile</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i> Messages</a>
+                    <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> History</a>
+                    <a href="#"><i class="fa-regular fa-note-sticky"></i> Tasks</a>
+                    <a href="#"><i class="fa-solid fa-users-line"></i> Communities</a>
+                </div>
+                <div class="links-group2">
+                    <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                    <a href="#"><i class="fa-solid fa-headset"></i> Support</a>
+                    <a href="#"><i class="fa-solid fa-user-lock"></i> Privacy</a>
+                </div>
+            </nav>
         </div>
         <main class="main">
             <div class="projects-section">
